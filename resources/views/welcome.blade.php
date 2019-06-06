@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.application', ['title' => 'Home'])
 
-        <title>FAQ_dev</title>
+    @section('content')
 
-        <!-- Fonts -->
+        <h1>FAQ_dev</h1>
 
-        <!-- Styles -->
-        <style>
-        </style>
-    </head>
-    <body>
-       FAQ_dev
-    <?= $first_name . ' ' . ' ' . $last_name ?>
-    </body>
-</html>
+        {{ $name }}
+
+    @include('shared._date')
+
+    @endsection

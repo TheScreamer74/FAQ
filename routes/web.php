@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
+
+    dd( DB::select('SELECT * FROM posts') );
+
     $view = view('welcome');
-    $view->first_name = 'The';
-    $view->last_name = 'Screamer';
+    $view->name = 'TheScreamer';
     return $view;
 });
 
@@ -28,9 +30,14 @@ Route::get('/help', function () {
 
 Route::get('/events', function () {
 
-    return view('pages.events', [
-        'Event_1' => 'premier event',
-        'Event_2' => 'deuxieme event',
-        'Event_3' => 'troisieme event',
-    ]);
+    $events = [
+        /*
+             'premier event',
+             'deuxieme event',
+             'troisieme event',
+        */
+    ];
+
+
+    return view('pages.events', compact('events'));
 });
