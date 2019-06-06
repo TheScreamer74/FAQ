@@ -14,7 +14,7 @@
 use App\Post;
 
 Route::get('/', function () {
-    $post = Post::create(['title' => 'ZAWARUDO', 'body' => 'TOKI WO TOMARE']);
+    DB::statement('DROP TABLE posts');
 });
 
 Route::get('/about', function () {
