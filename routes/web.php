@@ -14,10 +14,7 @@
 use App\Post;
 
 Route::get('/', function () {
-    $post = new Post;
-    $post->title = 'Titre bg';
-    $post->body = 'Body bg';
-    $post->save();
+    $post = Post::create(['title' => 'ZAWARUDO', 'body' => 'TOKI WO TOMARE']);
 });
 
 Route::get('/about', function () {
