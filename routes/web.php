@@ -16,7 +16,7 @@ use App\Post;
 Route::get('/', function () {
     $post = new Post;
     $post->title = 'Titre bg';
-    $post->titre = 'Body bg';
+    $post->body = 'Body bg';
     $post->save();
 });
 
