@@ -14,7 +14,7 @@
 use App\Post;
 
 Route::get('/', function () {
-    DB::statement('DROP TABLE posts');
+
 });
 
 Route::get('/about', function () {
