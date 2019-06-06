@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    dump ( DB::table ('posts')->get() );
+    return DB::table('posts')->insert([
+        'title' => 'Le gros titre',
+        'body' => 'Le gros body'
+    ]);
 });
 
 Route::get('/about', function () {
