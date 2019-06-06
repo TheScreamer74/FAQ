@@ -11,11 +11,13 @@
 |
 */
 
+use App\Post;
+
 Route::get('/', function () {
-    DB::table('posts')->insert([
-        'title' => 'Le gros titre',
-        'body' => 'Le gros body'
-    ]);
+    $post = new Post;
+    $post->title = 'Titre bg';
+    $post->titre = 'Body bg';
+    $post->save();
 });
 
 Route::get('/about', function () {
