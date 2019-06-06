@@ -12,12 +12,7 @@
 */
 
 Route::get('/', function () {
-
-    $post = ( DB::select('SELECT * FROM posts LIMIT 1' )[0] );
-    dd($post);
-    $view = view('welcome');
-    $view->name = 'TheScreamer';
-    return $view;
+    dump ( DB::table ('posts')->get() );
 });
 
 Route::get('/about', function () {
