@@ -13,8 +13,8 @@
 
 Route::get('/', function () {
 
-    dd( DB::select('SELECT * FROM posts') );
-
+    $post = ( DB::select('SELECT * FROM posts LIMIT 1' )[0] );
+    dd($post);
     $view = view('welcome');
     $view->name = 'TheScreamer';
     return $view;
